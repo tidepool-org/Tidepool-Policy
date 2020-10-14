@@ -5,3 +5,5 @@ This is a WIP effort to standardize process for editing and updating Tidepool IT
 Tidepool has existing policies that will be merged/integrated with these documents.
 
 [Tidepool Public Security Documentation](https://tidepool.org/security) A good starting place for current policy, compliance and infrastructure documentation
+
+updated 2020-10-14
