@@ -16,7 +16,7 @@ Run the following command to install the policy builder locally using NPM.
 
 ```npm install -g @jupiterone/security-policy-builder```
 
-- See security-policy-builder(https://github.com/JupiterOne/security-policy-builder) for more detailed info
+- See [security-policy-builder](https://github.com/JupiterOne/security-policy-builder) for more detailed info
 
 1. Pull the most recent copy of the [Tidepool Policy](https://github.com/tidepool-org/Tidepool-Policy.git) templates
 
