@@ -6,7 +6,6 @@ Tidepool has existing policies that will be merged/integrated with these documen
 
 [Tidepool Public Security Documentation](https://tidepool.org/security) A good starting place for current policy, compliance and infrastructure documentation
 
-<<<<<<< master
 # Publishing a new release of Tidepool-Policy
 The intent of this script is to help automate the publishing and managing of policy content for the Tidepool Project.
 Thanks to [JupiterOne](https://github.com/JupiterOne) for the tools to do this.
@@ -45,7 +44,3 @@ psp publish -c $TIDEPOOL_POLICY_DIR/templates/config.json -t $TIDEPOOL_POLICY_DI
 ```sh
 psp publish -c $TIDEPOOL_POLICY_DIR/templates/config.json --confluence --site tidepool --space TPOL -u ben@tidepool.org -k $ATLASSIAN_API -d $TIDEPOOL_POLICY_DIR/docs
 ```
-
-
-=======
-updated 2020-10-14
