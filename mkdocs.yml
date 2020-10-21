@@ -5,7 +5,7 @@ site_url: 'https://www.tidepool.org/security'
 theme:
   name: material
   theme_dir: 'custom_theme'
-  include_sidebar: false
+  include_sidebar: true
   palette:
     primary: ''
     accent: ''
