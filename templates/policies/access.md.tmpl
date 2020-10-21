@@ -76,7 +76,8 @@ exception basis.
 
 (b) If required by business operations, secrets/credentials must be shared
 securely and stored in encrypted vaults that meet the {{companyShortName}} data encryption
-standards.
+standards. Tidepool uses 1Password to securely store secrets internally, and uses `sops`
+to save encrypted secrets to Github securely in plain text.
 
 (c) Usage of a shared secret to access a critical system or resource must be
 supported by a complimenting solution to uniquely identify the user.
@@ -87,9 +88,9 @@ supported by a complimenting solution to uniquely identify the user.
 
 (a) Users must not log in directly to systems as a privileged user.
 
-  * A privileged user is someone who has administrative access to critical
-    systems, such as a Active Directory Domain Administrator, root user to a
-    Linux/Unix system, and Administrator or Root User to an AWS account.
+* A privileged user is someone who has full administrative access to critical
+systems, such as the root user to a Linux/Unix system, and Administrator or
+Root User to an AWS account.
 
 (b) Privilege access must only be gained through a proxy, or equivalent, that
 supports strong authentication (such as MFA) using a unique individual account
