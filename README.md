@@ -22,25 +22,5 @@ Run the following command to install the policy builder locally using NPM.
 
 1. Configure variables for the needed account and API keys
 
-### Code
+### [Publishing scripts](https://github.com/tidepool-org/Tidepool-Policy/tree/master/scripts/)
 
-#### Publish to JupiterOne
-
-```sh
-## Variables needed
-TIDEPOOL_POLICY_DIR=~/src/Tidepool/Tidepool-Policy
-# J1_ACCOUNT_ID=''
-# J1_API_TOKEN=''
-# ATLASSIAN_API=''
-
-## publish to Jupiter one
-psp build -c $TIDEPOOL_POLICY_DIR/templates/config.json -t $TIDEPOOL_POLICY_DIR/templates
-
-psp publish -c $TIDEPOOL_POLICY_DIR/templates/config.json -t $TIDEPOOL_POLICY_DIR/templates -a $J1_ACCOUNT_ID -k $J1_API_TOKEN -u ben@tidepool.org --wait
-```
-
-#### Publish to Confluence
-
-```sh
-psp publish -c $TIDEPOOL_POLICY_DIR/templates/config.json --confluence --site tidepool --space TPOL -u ben@tidepool.org -k $ATLASSIAN_API -d $TIDEPOOL_POLICY_DIR/docs
-```
