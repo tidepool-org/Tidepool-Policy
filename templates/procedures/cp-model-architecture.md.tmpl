@@ -45,15 +45,16 @@ as well as the security operations are developed and maintained by {{provider}}.
     - A package of essential application libraries and code but not
       the core OS libraries - Simpler to scale a docker image because - No
       duplication of core OS processes (networking, filesystem, etc) - Typically
-      a Docker container
+      a Docker container and in Tidepool's case is running inside Kubernetes.
 
 1. Function
 
     - Just the application code that runs in a pre-built container
 
-{{companyShortName}} strives to leverage functions as the primary building
+{{companyShortName}} strives to leverage Kubernetes running managed in AWS as the primary building
 blocks for our platform because:
 
-* functions deploy more quickly than containers and virtual machines
-* AWS automatically scales Lambda functions based on the number of incoming invocations
-* they are short-lived processes which minimizes attack surface
+* Infrastructure can be fully managed as code within Github, our source code management platform
+* Managed Kubernetes (EKS on AWS) eliminates the need to operate and secure our own control plane
+* Kubernetes allows us full visibility and auditability for all applications and services
+* Application updates can be deployed constantly for security and maintainability with no interruption to services
