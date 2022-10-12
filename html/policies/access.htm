@@ -1,0 +1,67 @@
+<h1>Access</h1>
+<p><code>2022.08.31</code></p>
+<p>Access to Tidepool systems and application is limited for all users, including
+but not limited to workforce members, volunteers, business associates,
+contracted providers, consultants, and any other entity, is allowable only on a
+minimum necessary basis. All users are responsible for reporting an incident of
+unauthorized user or access of the organization's information systems.</p>
+<p>These safeguards have been established to address the
+HIPAA Security regulations and industry best practices.</p>
+<h2>Policy Statements</h2>
+<h3>Access Control Policy</h3>
+<p>Tidepool policy requires that</p>
+<p>(a) Access to all computing resources, including servers, end-user computing
+devices, network equipment, services and applications, must be protected by
+strong authentication, authorization, and auditing.</p>
+<p>(b) Interactive user access must be associated to an account or login unique to
+each user.</p>
+<p>(c) All credentials, including user passwords, service accounts, and access
+keys, must meet the length, complexity, age, and rotation requirements defined
+in Tidepool security standards.</p>
+<p>(d) Use strong password and multi-factor authentication (MFA) whenever possible
+to authenticate to all computing resources (including both devices and
+applications).</p>
+<p>(e) MFA is required to access any critical system or resource, including but not
+limited to resources in Tidepool production environments.</p>
+<p>(f) Unused accounts, passwords, access keys must be removed within 30 days.</p>
+<p>(g) A unique access key or service account must be used for different
+application or user access.</p>
+<p>(h) Authenticated sessions must time out after a defined period of inactivity.</p>
+<h3>Access Authorization and Termination</h3>
+<p>Tidepool policy requires that</p>
+<p>(a) Access authorization shall be implemented using role-based access control
+(RBAC) or similar mechanism.</p>
+<p>(b) Standard access based on a user's job role may be pre-provisioned during
+employee onboarding. All subsequent access requests to computing resources must
+be approved by the requestor’s manager, prior to granting and provisioning of
+access.</p>
+<p>(c) Access to critical resources, such as production environments, must be
+approved by the security team in addition to the requestor’s manager.</p>
+<p>(d) Access must be reviewed on a regular basis and revoked if no longer needed.</p>
+<p>(e) Upon termination of employment, all system access must be revoked and user
+accounts terminated within 24 hours or one business day, whichever is shorter.</p>
+<p>(f) All system access must be reviewed at least annually and whenever a user's
+job role changes.</p>
+<h3>Shared Secrets Management</h3>
+<p>Tidepool policy requires that</p>
+<p>(a) Use of shared credentials/secrets must be minimized and approved on an
+exception basis.</p>
+<p>(b) If required by business operations, secrets/credentials must be shared
+securely and stored in encrypted vaults that meet the Tidepool data encryption
+standards. Tidepool uses <code>1Password</code> to securely store secrets internally, and uses <code>sops</code>
+to save encrypted secrets to Github securely in plain text.</p>
+<p>(c) Usage of a shared secret to access a critical system or resource must be
+supported by a complimenting solution to uniquely identify the user.</p>
+<h3>Privileged Access Management</h3>
+<p>Tidepool policy requires that</p>
+<p>(a) Users must not log in directly to systems as a privileged user.</p>
+<ul>
+<li>A privileged user is someone who has full administrative access to critical
+systems, such as the root user to a Linux/Unix system, and Administrator or
+Root User to an AWS account.</li>
+</ul>
+<p>(b) Privilege access must only be gained through a proxy, or equivalent, that
+supports strong authentication (such as MFA) using a unique individual account
+with full auditing of user activities.</p>
+<p>(c) Direct administrative access to production systems must be kept to an
+absolute minimum.</p>

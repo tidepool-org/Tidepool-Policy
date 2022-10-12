@@ -1,7 +1,7 @@
 ### Configuration Management Processes
 
 1. Configuration management is automated using industry-recognized tools like
-   Chef, Salt and Terraform to enforce secure configuration standards.
+   Terraform to enforce secure configuration standards.
 
 2. All changes to production systems, network devices, and firewalls are
    reviewed and approved by Security team before they are implemented to assure
@@ -32,14 +32,8 @@
     * During each change implementation, the change is reviewed and verified by
       the target asset owner as needed.
 
-6. {{companyShortName}} uses the [Security Technical Implementation Guides
-   (STIGs)](http://iase.disa.mil/stigs/) published by the Defense Information
-   Systems Agency as a baseline for hardening systems.
+6. {{companyShortName}} uses only approved and hardened containers in support of Tidepool Production
 
-    * Windows-based systems use a baseline Active Directory group policy
-      configuration in conjunction with the DISA STIGs.
-    * Linux-based systems use Red Hat Enterprise Linux STIG as a guideline for
-      implementation.
     * EC2 instances in AWS are provisioned using only hardened and approved
       Amazon Machine Images (AMIs).
     * Docker containers are launched using only approved Docker images that have
@@ -48,9 +42,9 @@
 7. All IT assets in {{companyShortName}} have time synchronized to a single
    authoritative source.
 
-    * On-premise systems are configured to point to an internal NTP server.
+    * All systems are configured to point to a common NTP server.
     * The internal NTP server and all AWS instances are pointing to the same set
-      of ntp.org servers.
+      of ntp servers.
 
 6. All frontend functionality (e.g. user dashboards and portals) is separated
    from backend (e.g. database and app servers) systems by being deployed on

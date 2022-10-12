@@ -1,0 +1,26 @@
+<h3>Protecting Data In Transit</h3>
+<ol>
+<li>All external data transmission is encrypted end-to-end using encryption keys
+managed by Tidepool. This includes, but is not limited to, cloud
+infrastructure and third party vendors and applications.</li>
+<li>Transmission encryption keys and systems that generate keys are protected
+from unauthorized access. Transmission encryption key materials are protected
+with access controls, and may only be accessed by privileged accounts.</li>
+<li>Transmission encryption keys use a minimum of 4096-bit RSA keys, or keys and
+ciphers of equivalent or higher cryptographic strength (e.g., 256-bit AES
+session keys in the case of IPSec encryption).</li>
+<li>Transmission encryption keys are limited to use for one year and then must be
+regenerated.</li>
+<li>For all Tidepool APIs, enforcement of authentication, authorization, and
+auditing is used for all remote systems sending, receiving, or storing data.</li>
+<li>System logs of all transmissions of Production Data access are kept. These logs must
+be available for audit.</li>
+</ol>
+<h4>Encryption of Data in Transit</h4>
+<p>All internet and intranet connections are encrypted and authenticated using TLS
+1.2 (a strong protocol), ECDHE_RSA with P-256 (a strong key exchange), and
+AES_128_GCM (a strong cipher).</p>
+<h4>Data protection via end-user messaging channels</h4>
+<p>Restricted and sensitive data is not allowed to be sent over electronic end-user
+messaging channels such as email or chat, unless end-to-end encryption is
+enabled.</p>

@@ -1,0 +1,41 @@
+<h3>Source Code Management</h3>
+<p>Tidepool development/engineering team uses https://github.com/tidepool-org for
+source code management. Access to https://github.com/tidepool-org and its configuration
+standards include:</p>
+<ul>
+<li>
+<p>All developers must authenticate to gain access to https://github.com/tidepool-org and code
+repos hosted on https://github.com/tidepool-org according to standards and procedures
+defined in the <a href="access.htm">Access Policy</a>:</p>
+<ul>
+<li>Access control to the https://github.com/tidepool-org web interface must be enabled, via
+SSO and/or MFA if applicable</li>
+<li>SSH public/private key access may be used for command line or <code>git</code> access
+to the code repos</li>
+</ul>
+</li>
+<li>
+<p>All code repos in https://github.com/tidepool-org follow these configuration standards:</p>
+<ul>
+<li>All repos must have an owner identified and listed</li>
+<li>All repos are by default <code>private</code></li>
+</ul>
+</li>
+<li>
+<p>Certain branch restrictions are enabled, including:</p>
+<ul>
+<li>The <code>master</code> branch cannot be rebased</li>
+<li>Restrict direct commits into <code>master</code></li>
+<li>Restrict history rewrites of <code>master</code></li>
+<li>Restrict deletion of <code>master</code></li>
+</ul>
+</li>
+<li>
+<p>Certain pull request (PR) requirements are enforced before merging, including:</p>
+<ul>
+<li>Must have at least 1 review approval to merge</li>
+<li>Must have at least 1 successful build to merge</li>
+<li>all PR tasks must be completed</li>
+</ul>
+</li>
+</ul>

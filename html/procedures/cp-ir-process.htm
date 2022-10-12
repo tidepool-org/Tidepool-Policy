@@ -1,0 +1,349 @@
+<h3>Incident Management Process</h3>
+<p>The Tidepool incident response process follows the process recommended by
+<a href="https://www.sans.org">SANS</a>, an industry leader in security. Process flows are
+a direct representation of the SANS process which can be found in <a href="sections/incident-flowchart.pdf">this
+document</a>.</p>
+<p>Tidepool's incident response classifies security-related events into the
+following categories:</p>
+<ul>
+<li>
+<p><strong>Events</strong> - Any observable computer security-related occurrence in a system
+or network with a negative consequence. Examples:</p>
+<ul>
+<li>Hardware component failing causing service outages.</li>
+<li>Software error causing service outages.</li>
+<li>General network or system instability.</li>
+</ul>
+</li>
+<li>
+<p><strong>Precursors</strong> - A sign that an incident may occur in the future. Examples:</p>
+<ul>
+<li>
+<p>Monitoring system showing unusual behavior.</p>
+</li>
+<li>
+<p>Audit log alerts indicated several failed login attempts.</p>
+</li>
+<li>
+<p>Suspicious emails targeting specific Tidepool staff members with
+administrative access to production systems.</p>
+</li>
+<li>
+<p>Alerts raised from a security control source based on its monitoring
+policy, such as</p>
+<ul>
+<li>Okta (user authentication activities)</li>
+<li>Threat Stack (AWS Cloudtrail events or system agent activities)</li>
+<li>Dome9 (cloud services configuration or access alerts)</li>
+<li>Carbon Black Cb Defense (malware and endpoint events)</li>
+<li>Syslog events from servers</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Indications</strong> - A sign that an incident may have occurred or may be
+occurring at the present time. Examples:</p>
+<ul>
+<li>Alerts for modified system files or unusual system accesses.</li>
+<li>Antivirus alerts for infected files or devices.</li>
+<li>Excessive network traffic directed at unexpected geographic locations.</li>
+</ul>
+</li>
+<li>
+<p><strong>Incidents</strong> - A confirmed attack / indicator of compromise or a validated
+violation of computer security policies or acceptable use policies, often
+resulting in data breaches. Examples:</p>
+<ul>
+<li>Unauthorized disclosure of sensitive data.</li>
+<li>Unauthorized change or destruction of sensitive data.</li>
+<li>A data breach accomplished by an internal or external entity.</li>
+<li>A Denial-of-Service (DoS) attack causing a critical service to become
+unreachable.</li>
+</ul>
+</li>
+</ul>
+<p>Tidepool employees must report any unauthorized or suspicious activity seen on
+production systems or associated with related communication systems (such as
+email or Slack). In practice this means keeping an eye out for security events,
+and letting the Security team know about any observed precursors or indications
+as soon as they are discovered.</p>
+<pre><code class="language-info-Attention">Attention
+</code></pre>
+<pre><code>Incidents of a severity/impact rating higher than **MINOR** shall trigger the
+following response process, or as defined more specifically in the **Incident
+Categories and Playbooks** section.
+</code></pre>
+<h4>I - Identification and Triage</h4>
+<ol>
+<li>
+<p>Immediately upon observation Tidepool members report suspected and known
+Events, Precursors, Indications, and Incidents in one of the following ways:</p>
+<ol>
+<li>Direct report to management, the Security Officer, Privacy Officer, or
+other;</li>
+<li>Email;</li>
+<li>Phone call;</li>
+<li>Submit an incident report online via
+<a href="https://tidepool.atlassian.net/secure/RapidBoard.jspa?rapidView=39&#x26;projectKey=SIR">Tidepool Internal ServiceDesk</a>;</li>
+<li>Secure chat; or</li>
+<li>Anonymously through workforce members desired channels.</li>
+</ol>
+</li>
+<li>
+<p>The individual receiving the report facilitates the collection of additional
+information about the incident, as needed, and notifies the Security Officer
+(if not already done).</p>
+</li>
+<li>
+<p>The Security Officer determines if the issue is an Event, Precursor,
+Indication, or Incident.</p>
+<ol>
+<li>
+<p>If the issue is an event, indication, or precursor the Security Officer
+forwards it to the appropriate resource for resolution.</p>
+<ol>
+<li>Non-Technical Event (minor infringement): the Security Officer of
+designee creates an appropriate issue in https://tidepool.atlassian.net and further investigates
+the incident as needed.</li>
+<li>Technical Event: Assign the issue to an technical resource for
+resolution. This resource may also be a contractor or outsourced
+technical resource, in the event of a lack of resource or expertise in
+the area.</li>
+</ol>
+</li>
+<li>
+<p>If the issue is a security incident the Security Officer activates the
+Security Incident Response Team (SIRT) and notifies senior leadership by
+email.</p>
+<ol>
+<li>
+<p>If a non-technical security incident is discovered the SIRT completes
+the investigation, implements preventative measures, and resolves the
+security incident.</p>
+</li>
+<li>
+<p>Once the investigation is completed, progress to Phase V, Follow-up.</p>
+</li>
+<li>
+<p>If the issue is a technical security incident, commence to Phase II:
+Containment.</p>
+</li>
+<li>
+<p>The Containment, Eradication, and Recovery Phases are highly
+technical. It is important to have them completed by a highly
+qualified technical security resource with oversight by the SIRT team.</p>
+</li>
+<li>
+<p>Each individual on the SIRT and the technical security resource
+document all measures taken during each phase, including the start and
+end times of all efforts.</p>
+</li>
+<li>
+<p>The lead member of the SIRT team facilitates initiation of an Incident
+ticket in https://tidepool.atlassian.net Security Project and documents all findings and details
+in the ticket.</p>
+<ul>
+<li>The intent of the Incident ticket is to provide a summary of all
+events, efforts, and conclusions of each Phase of this policy and
+procedures.</li>
+<li>Each Incident ticket should contain sufficient details following
+the <a href="https://www.sans.org/score/incident-forms/">SANS Security Incident Forms templates</a>,
+as appropriate.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>The Security Officer, Privacy Officer, or Tidepool representative appointed
+notifies any affected Customers and Partners. If no Customers and Partners
+are affected, notification is at the discretion of the Security and Privacy
+Officer.</p>
+</li>
+<li>
+<p>In the case of a threat identified, the Security Officer is to form a team to
+investigate and involve necessary resources, both internal to Tidepool and
+potentially external.</p>
+</li>
+</ol>
+<h4>II - Containment (Technical)</h4>
+<p>In this Phase, Tidepool's engineers and security team attempts to contain the
+security incident. It is extremely important to take detailed notes during the
+security incident response process. This provides that the evidence gathered
+during the security incident can be used successfully during prosecution, if
+appropriate.</p>
+<ol>
+<li>
+<p>Review any information that has been collected by the Security team or any
+other individual investigating the security incident.</p>
+</li>
+<li>
+<p>Secure the blast radius (i.e. a physical or logical network perimeter or
+access zone).</p>
+</li>
+<li>
+<p>Perform the following forensic analysis preparation, as needed:</p>
+<ol>
+<li>Securely connect to the affected system over a trusted connection.</li>
+<li>Retrieve any volatile data from the affected system.</li>
+<li>Determine the relative integrity and the appropriateness of backing the
+system up.</li>
+<li>As necessary, take a snapshot of the disk image for further forensic;
+and if appropriate, back up the system.</li>
+<li>Change the password(s) to the affected system(s).</li>
+<li>Determine whether it is safe to continue operations with the affect
+system(s).</li>
+<li>If it is safe, allow the system to continue to function; and move to
+Phase V, Post Incident Analysis and Follow-up.</li>
+<li>If it is NOT safe to allow the system to continue operations, discontinue
+the system(s) operation and move to Phase III, Eradication.</li>
+<li>The individual completing this phase provides written communication to
+the SIRT.</li>
+</ol>
+</li>
+<li>
+<p>Complete any documentation relative to the security incident containment on the
+Incident ticket, using
+<a href="https://www.sans.org/media/score/incident-forms/IH-Containment.pdf">SANS IH Containment Form</a>
+as a template.</p>
+</li>
+<li>
+<p>Continuously apprise Senior Management of progress.</p>
+</li>
+<li>
+<p>Continue to notify affected Customers and Partners with relevant updates as
+needed.</p>
+</li>
+</ol>
+<h4>III - Eradication (Technical)</h4>
+<p>The Eradication Phase represents the SIRT's effort to remove the cause, and the
+resulting security exposures, that are now on the affected system(s).</p>
+<ol>
+<li>
+<p>Determine symptoms and cause related to the affected system(s).</p>
+</li>
+<li>
+<p>Strengthen the defenses surrounding the affected system(s), where possible (a
+risk assessment may be needed and can be determined by the Security Officer).
+This may include the following:</p>
+<ol>
+<li>An increase in network perimeter defenses.</li>
+<li>An increase in system monitoring defenses.</li>
+<li>Remediation ("fixing") any security issues within the affected system,
+such as removing unused services/general host hardening techniques.</li>
+</ol>
+</li>
+<li>
+<p>Conduct a detailed vulnerability assessment to verify all the holes/gaps that
+can be exploited have been addressed.</p>
+<ol>
+<li>If additional issues or symptoms are identified, take appropriate
+preventative measures to eliminate or minimize potential future
+compromises.</li>
+</ol>
+</li>
+<li>
+<p>Update the Incident ticket with Eradication details, using
+<a href="https://www.sans.org/media/score/incident-forms/IH-Eradication.pdf">SANS IH Eradication Form</a>
+as a template.</p>
+</li>
+<li>
+<p>Update the documentation with the information learned from the vulnerability
+assessment, including the cause, symptoms, and the method used to fix the
+problem with the affected system(s).</p>
+</li>
+<li>
+<p>Apprise Senior Management of the progress.</p>
+</li>
+<li>
+<p>Continue to notify affected Customers and Partners with relevant updates as
+needed.</p>
+</li>
+<li>
+<p>Move to Phase IV, Recovery.</p>
+</li>
+</ol>
+<h4>IV - Recovery (Technical)</h4>
+<p>The Recovery Phase represents the SIRT's effort to restore the affected
+system(s) back to operation after the resulting security exposures, if any, have
+been corrected.</p>
+<ol>
+<li>
+<p>The technical team determines if the affected system(s) have been changed in
+any way.</p>
+<ol>
+<li>If they have, the technical team restores the system to its proper,
+intended functioning ("last known good").</li>
+<li>Once restored, the team validates that the system functions the way it
+was intended/had functioned in the past. This may require the involvement
+of the business unit that owns the affected system(s).</li>
+<li>If operation of the system(s) had been interrupted (i.e., the system(s)
+had been taken offline or dropped from the network while triaged),
+restart the restored and validated system(s) and monitor for behavior.</li>
+<li>If the system had not been changed in any way, but was taken offline
+(i.e., operations had been interrupted), restart the system and monitor
+for proper behavior.</li>
+<li>Update the documentation with the detail that was determined during this
+phase.</li>
+<li>Apprise Senior Management of progress.</li>
+<li>Continue to notify affected Customers and Partners with relevant updates
+as needed.</li>
+<li>Move to Phase V, Follow-up.</li>
+</ol>
+</li>
+</ol>
+<h4>V - Post-Incident Analysis (Technical and Non-Technical)</h4>
+<p>The Follow-up phase represents the review of the security incident to look for
+"lessons learned" and to determine whether the process that was taken could have
+been improved in any way. It is recommended all security incidents be reviewed
+shortly after resolution to determine where response could be improved.
+Timeframes may extend to one to two weeks post-incident.</p>
+<ol>
+<li>
+<p>Responders to the security incident (SIRT Team and technical security
+resource) meet to review the documentation collected during the security
+incident.</p>
+</li>
+<li>
+<p>A "lessons learned" section is written and attached to Incident ticket.</p>
+<ol>
+<li>
+<p>Evaluate the cost and impact of the security incident to Tidepool using
+the documents provided by the SIRT and the technical security resource.</p>
+</li>
+<li>
+<p>Determine what could be improved. This may include:</p>
+<ul>
+<li>Systems and processes adjustments</li>
+<li>Awareness training and documentation</li>
+<li>Implementation of additional controls</li>
+</ul>
+</li>
+<li>
+<p>Communicate these findings to Senior Management for approval and for
+implementation of any recommendations made post-review of the security
+incident.</p>
+</li>
+<li>
+<p>Carry out recommendations approved by Senior Management; sufficient
+budget, time and resources should be committed to this activity.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Ensure all incident related information is recorded and retained as described
+in Tidepool Auditing requirements and Data Retention standards.</p>
+</li>
+<li>
+<p>Close the security incident.</p>
+</li>
+</ol>
+<h4>Periodic Evaluation</h4>
+<p>It is important to note that the processes surrounding security incident
+response should be periodically reviewed and evaluated for effectiveness. This
+also involves appropriate training of resources expected to respond to security
+incidents, as well as the training of the general population regarding the
+Tidepool's expectation for them, relative to security responsibilities. The
+incident response plan is tested annually.</p>

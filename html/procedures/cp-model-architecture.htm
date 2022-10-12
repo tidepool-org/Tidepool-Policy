@@ -1,0 +1,65 @@
+<h3>Security Architecture</h3>
+<p>Tidepool developed a security architecture on top of its three main
+infrastructure environments - Cloud (AWS), DevOps, and workforce collaboration /
+end-user computing.</p>
+<h4>Architecture Diagrams</h4>
+<p>Detailed architecture diagrams of the in-scope networks, endpoints, applications
+as well as the security operations are developed and maintained by JupiterOne.</p>
+<h4>Cloud Architecture</h4>
+<h5>Cloud Native</h5>
+<ul>
+<li>Designed for the cloud using true multi-tenant architecture</li>
+<li>Auto scaling across multiple data centers in multiple regions around the world</li>
+<li>Tidepool services deployed inside private subnets of Virtual Private Cloud (VPC)</li>
+<li>Comprehensive security and compliance via AWS certifications</li>
+<li>Ongoing security testing by AWS and AWS customers</li>
+</ul>
+<h5>Customer Benefits</h5>
+<ul>
+<li>Infrastructure is tailored to our customer's goals and usage patterns</li>
+<li>"Shared use" model reduces cost</li>
+<li>Nearly infinite compute and data capacity via AWS cloud provider</li>
+<li>Customers can focus on solving business problems and not worry about infrastructure</li>
+<li>Automatic backup and recovery</li>
+<li>Continuous improvements via change control process</li>
+<li>Faster adoption of new technology</li>
+</ul>
+<h5>Evolution of Cloud Computing</h5>
+<ol>
+<li>
+<p>Baremetal</p>
+<ul>
+<li>A computer in someone else's data center</li>
+</ul>
+</li>
+<li>
+<p>Virtual Machine</p>
+<ul>
+<li>A portion of a computer in someone else's data center</li>
+<li>In AWS, a Virtual Machine is created from Amazon Machine Image (AMI)</li>
+</ul>
+</li>
+<li>
+<p>Container</p>
+<ul>
+<li>A package of essential application libraries and code but not
+the core OS libraries - Simpler to scale a docker image because - No
+duplication of core OS processes (networking, filesystem, etc) - Typically
+a Docker container nad in Tidepool's case is running inside Kubernetes</li>
+</ul>
+</li>
+<li>
+<p>Function</p>
+<ul>
+<li>Just the application code that runs in a pre-built container</li>
+</ul>
+</li>
+</ol>
+<p>Tidepool strives to leverage Kubernetes running managed in AWS as the primary building
+blocks for our platform because:</p>
+<ul>
+<li>Infrastructure can be fully managed as code within Github, our source code management platform</li>
+<li>Managed Kubernetes (EKS on AWS) eliminates the need to operate and secure our own control plane</li>
+<li>Kubernetes allows us full visibility and auditability for all applications and services</li>
+<li>Application updates can be deployed constantly for security and maintainability with no interruption to services</li>
+</ul>

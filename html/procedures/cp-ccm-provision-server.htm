@@ -1,0 +1,50 @@
+<h3>Server Hardening Guidelines and Processes</h3>
+<ol>
+<li>
+<p><strong>Linux System Hardening:</strong> Linux systems have their baseline security
+configuration applied via automation tools. These tools cover:</p>
+<ul>
+<li>Ensuring that the machine is up-to-date with security patches and is
+configured to apply patches in accordance with our policies.</li>
+<li>Stopping and disabling any unnecessary OS services.</li>
+<li>Apply applicable DISA STIGs to OS and applications.</li>
+<li>Configuring 15-minute session inactivity timeouts for SSH sessions.</li>
+<li>Installing and configuring the virus scanner.</li>
+<li>Installing and configuring the NTP daemon, including ensuring that
+modifying system time cannot be performed by unprivileged users.</li>
+<li>Configuring disk volumes for providers that do not have native support for
+encrypted data volumes, including ensuring that encryption keys are
+protected from unauthorized access.</li>
+<li>Configuring authentication to the centralized Directory Services servers.</li>
+<li>Configuring audit logging as described in the <a href="system-audit.htm">Auditing Policy
+section</a>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Windows System Hardening:</strong> Windows systems have their baseline security
+configuration applied via the combination of Group Policy settings and/or
+automation scripts. These baseline settings cover:</p>
+<ul>
+<li>Joining the Windows Domain Controller and applying the Active Directory
+Group Policy configuration (for AD-managed systems only).</li>
+<li>Ensuring that the machine is up-to-date with security patches and is
+configured to apply patches in accordance with our policies.</li>
+<li>Apply applicable DISA STIGs to OS and applications.</li>
+<li>Stopping and disabling any unnecessary OS services.</li>
+<li>Configuring session inactivity timeouts.</li>
+<li>Installing and configuring security protection agents such as anti-virus
+scanner.</li>
+<li>Configuring transport encryption according to the requirements described
+in the <a href="mdm.htm">Mobile Device Security and Disposable Media Management
+section</a>.</li>
+<li>Configuring the system clock to point to approved NTP servers and ensuring
+that modifying system time cannot be performed by unprivileged users.</li>
+<li>Configuring audit logging as described in the <a href="system-audit.htm">Auditing Policy
+section</a>.</li>
+</ul>
+</li>
+<li>
+<p>Any additional configuration changes applied to hardened Windows systems must
+be clearly documented by the implementer and reviewed by the Security team.</p>
+</li>
+</ol>

@@ -1,0 +1,108 @@
+<h3>General Disaster Recovery Procedures</h3>
+<h4>Notification and Activation Phase</h4>
+<p>This phase addresses the initial actions taken to detect and assess damage
+inflicted by a disruption to Tidepool operations. Based on the assessment of
+the Event, sometimes according to the Tidepool Incident Response
+Policy, the Contingency Plan may be activated by the VP of Engineering, COO or CEO.  The Contingency Plan may also be activated in the event of a cyber disaster.</p>
+<p>The notification sequence is listed below:</p>
+<ul>
+<li>
+<p>The first responder is to notify the VP of Engineering. All known information must be relayed to the VP of Engineering.</p>
+</li>
+<li>
+<p>The VP of Engineering is to contact the Response Teams and inform them of the event. The VP of Engineering
+or delegate is responsible to begin assessment procedures.</p>
+</li>
+<li>
+<p>The VP of Engineering is to notify team members and direct them to complete the assessment
+procedures outlined below to determine the extent of damage and estimated
+recovery time. </p>
+<ul>
+<li>Damage Assessment Procedures:</li>
+<li>The VP of Engineering is to logically assess damage, gain insight into whether digital
+infrastructure is salvageable, and begin to formulate a plan for recovery.</li>
+<li>Alternate Assessment Procedures:</li>
+<li>Upon notification, the VP of Engineering is to follow the procedures for damage
+assessment with the Response Teams.</li>
+</ul>
+</li>
+<li>
+<p>The Tidepool Contingency Plan is to be activated if one or more of the
+following criteria are met:</p>
+<ul>
+<li>Tidepool will be unavailable for more than 48 hours.</li>
+<li>On-premise hosting facility or cloud infrastructure service is damaged and
+will be unavailable for more than 24 hours.</li>
+<li>Other criteria, as appropriate and as defined by Tidepool.</li>
+</ul>
+</li>
+<li>
+<p>If the plan is to be activated, the VP of Engineering is to notify and inform team members
+of the details of the event and if relocation is required.</p>
+</li>
+<li>
+<p>Upon notification from the VP of Engineering, group leaders and managers are to notify their
+respective teams. Team members are to be informed of all applicable
+information and prepared to respond and relocate if necessary.</p>
+</li>
+<li>
+<p>The VP of Engineering is to notify remaining personnel and executive leadership on the
+general status of the incident.</p>
+</li>
+<li>
+<p>Notification can be message, email, or phone.</p>
+</li>
+</ul>
+<h4>Recovery Phase</h4>
+<p>This section provides procedures for recovering Tidepool infrastructure and
+operations at an alternate site, whereas other efforts are directed to repair
+damage to the original system and capabilities.</p>
+<p>Procedures are outlined per team required. Each procedure should be executed in
+the sequence it is presented to maintain efficient operations.</p>
+<p>Recovery Goal: The goal is to rebuild Tidepool infrastructure to a production
+state.</p>
+<p>The tasks outlines below are not sequential and some can be run in parallel.</p>
+<ol>
+<li>Contact Partners and Customers affected to begin initial communication -
+Operations</li>
+<li>Assess damage to the environment - Operations and Backend</li>
+<li>Create a new production environment using new environment bootstrap
+automation - Operations and Backend</li>
+<li>Ensure secure access to the new environment - Security</li>
+<li>Begin code deployment and data replication using pre-established automation -
+Operations and Backend</li>
+<li>Test new environment and applications using pre-written tests - Operations, QA, and Backend</li>
+<li>Test logging, security, and alerting functionality - Operations and Security</li>
+<li>Assure systems and applications are appropriately patched and up to date -
+Backend and Operations</li>
+<li>Update DNS and other necessary records to point to new environment - Operations and Security</li>
+<li>Update Partners and Customers affected through established channels - Operations and Security</li>
+</ol>
+<h4>Reconstitution Phase</h4>
+<p>This section discusses activities necessary for restoring full
+Tidepool operations at the original or new site. The goal is to
+restore full operations within 24 hours of a disaster or outage. If necessary,
+when the hosted data center at the original or new site has been restored,
+Tidepool operations at the alternate site may be transitioned back.
+The goal is to provide a seamless transition of operations from the alternate
+site to the computer center.</p>
+<ol>
+<li>
+<p>Original or New Site Restoration</p>
+<ul>
+<li>Repeat steps 5-9 in the Recovery Phase at the original or new site /
+environment.</li>
+<li>Restoration of Original site is unnecessary for cloud environments, except
+when required for forensic purpose.</li>
+</ul>
+</li>
+<li>
+<p>Plan Deactivation</p>
+<ul>
+<li>If the Tidepool environment is moved back to the original site
+from the alternative site, all digital infrastructure used at the alternate site should
+be handled and decommissioned according to the Tidepool Media
+Disposal Policy.</li>
+</ul>
+</li>
+</ol>

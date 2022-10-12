@@ -1,0 +1,27 @@
+<h1>Configuration and Change Management</h1>
+<p><code>2022.09.09</code></p>
+<p>Tidepool standardizes and automates configuration management through the use of
+automation scripts as well as documentation of all changes to production systems
+and networks. Automation tools such as Chef, Salt, and Terraform automatically
+configure all Tidepool systems according to established and tested policies, and
+are used as part of our Disaster Recovery plan and process.</p>
+<h2>Policy Statements</h2>
+<p>Tidepool policy requires that:</p>
+<p>(a) All production changes, including but not limited to software deployment,
+feature toggle enablement, network infrastructure changes, and access control
+authorization updates, must be invoked through approved change management
+process.</p>
+<p>(b) Each production change must maintain complete traceability to fully document
+the request, including requestor, date/time of change, actions taken and
+results.</p>
+<p>(c) Each production change must be fully tested prior to implementation.</p>
+<p>(d) Each production change must include a rollback plan to back out the change
+in the event of failure.</p>
+<p>(e) Each production change must include proper approval.</p>
+<ul>
+<li>The approvers are determined based on the type of change.</li>
+<li>Approvers must be someone other than the author/executor of the change.</li>
+<li>Approvals may be automatically granted if certain criteria is met.
+The auto-approval criteria must be pre-approved by the Security Officer or VP of Engineering and
+fully documented and validated for each request.</li>
+</ul>

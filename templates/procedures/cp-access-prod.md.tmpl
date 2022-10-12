@@ -2,10 +2,10 @@
 
 {{companyShortName}} leverages a combination of [{{ciSystem}} credentials
 store](https://support.cloudbees.com/hc/en-us/articles/203802500-Injecting-Secrets-into-{{ciSystem}}-Build-Jobs),
-[credstash](https://github.com/fugue/credstash), and [Amazon EC2 Systems Manager
-Parameter
-Store](https://aws.amazon.com/blogs/mt/the-right-way-to-store-secrets-using-parameter-store/)
+[sops](https://github.com/mozilla/sops), and [Amazon KMS](https://docs.aws.amazon.com/kms/index.html)
 to securely store production secrets.  Secrets are always encrypted; access to
 secrets is always controlled and audited.
+
+{{companyShortName}} utlizes sops for portablity and to ensure we can safely store and use secrets in source code
 
 Details and usage are documented on the {{companyShortName}} Engineering Wiki.

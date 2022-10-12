@@ -1,0 +1,148 @@
+<h3>Software Development Process</h3>
+<h4>Overview</h4>
+<p>Software development at Tidepool follows a release strategy that provides
+traceability for production software changes. Features, enhancements, and bugs
+are written up as Issues in https://tidepool.atlassian.net. An engineer on a small team proposes changes
+necessary and creates a review for the team (https://github.com/tidepool-org). Continuous integration
+(circle-ci.org) kicks off unit and functional tests which pass before changes are
+merged into the repository. Once the review is complete, the changes are now
+deployed to the development environment where regression and end-to-end tests
+are run before the new code replaces the existing in-service code (test then
+deploy model). Small teams can decide to follow a source-control branching
+strategy that makes sense: git-flow, github flow.</p>
+<p>Tidepool practices continuous delivery of code into production
+through multiple environments: development, testing, production. The deploy
+process and infrastructure roll-out are written as code (using technologies
+such as Terraform and AWS Cloudformation) and managed under source control.</p>
+<p>Tidepool’s multiple lower environments (dev, test) provide an ecosystem of
+sample data sets that exercise the application and services when test automation
+is run. The test environment is where the system is stressed for performance and
+scalability. Performance and scalability changes are driven by metric data
+captured through monitoring and logging (metrics before and after change –
+typically captured as part of the issue description/writeup).</p>
+<p>Deployments to production are gated by change control process where an issue is
+opened which identify what is new/changed (https://tidepool.atlassian.net). Sign-offs are recorded by
+development, and testing and if needed due to scope or sensitivity - security, and product management. Production roll-outs
+happen on a regular basis without impact to service. This continuous process
+allows for security updates to roll out regularly and with urgency. If there is
+impact to production, a rollback is performed to restore service and whatever
+caused the problem is reverted from source. This restarts the re-proposal
+approval process of source changes. This process keeps the set of differences
+between the development environment and the production environment as low as
+possible.</p>
+<p>In the continuous delivery mindset, features are not released by the deployment
+of code into production, instead features are enabled in production at the
+appropriate time (dark launching). Feature toggle enablement in production is gated
+by a change control ticket (https://tidepool.atlassian.net) that follows the software roll-out approval
+process. Feature toggle enablement in production can have a few more
+dependencies than code. Those dependencies include things like external
+documentation, early access programs, and internal playbooks for supporting the
+feature.</p>
+<h4>Secure Development Standards</h4>
+<p><a href="https://en.wikipedia.org/wiki/Traceability">Traceability</a> of code changes allow
+for our software to be a living entity.  Our current system for documenting
+changes is https://tidepool.atlassian.net. Every commit and/or Pull-Request, should have a https://tidepool.atlassian.net supplied
+that describes contextually why this change is necessary and reasonable.  These
+artifacts over time allow for one to trace the lineage of why our production
+software and services change over time.</p>
+<p>All Tidepool <code>git</code> repositories have a company standard configuration from a
+https://github.com/tidepool-org perspective.  This standard is a guideline and can be relaxed, but
+socialize when those exceptions are needed.  </p>
+<p><strong>Developers follow the branch strategy and code review process below:</strong></p>
+<ol>
+<li>
+<p>All development uses feature branches based on the main branch used for the
+current release. Any changes required for a new feature or defect fix are
+committed to that feature branch.</p>
+<ul>
+<li>These changes must be covered under 1) a unit test where possible, or 2)
+integration tests.</li>
+<li>Integration tests are <em>required</em> if unit tests cannot reliably exercise
+all facets of the change.</li>
+</ul>
+</li>
+<li>
+<p>Developers are strongly encouraged to follow the <a href="https://github.com/blog/926-shiny-new-commit-styles">commit message conventions
+suggested by GitHub</a>.</p>
+<ul>
+<li>Commit messages should start with the https://tidepool.atlassian.net Issue ID when
+applicable.</li>
+</ul>
+</li>
+<li>
+<p>Once the feature and corresponding tests are complete, a pull request (PR)
+will be created using the https://github.com/tidepool-org web interface. The pull request should
+indicate which feature or defect is being addressed and should provide a
+high-level description of the changes made.</p>
+</li>
+<li>
+<p>Code reviews are performed as part of the pull request procedure. Once a
+change is ready for review, the author(s) will notify other engineers using
+an appropriate mechanism, typically by adding reviewers as PR approvers.</p>
+<ul>
+<li>Other engineers will review the changes, using the guidelines above.</li>
+<li>Engineers should note all potential issues with the code; it is the
+responsibility of the author(s) to address those issues or explain why
+they are not applicable.</li>
+<li>If changes/commits are made to a PR, it should reset previous approvals
+and require review and approvals again before the PR can be merged.</li>
+<li>Once the review process finishes, each reviewer should approve the PR, at
+which point the original author(s) may merge their change into the main
+branch (i.e. master).</li>
+<li>PR can only be merged with at least one approval from a reviewer other
+than the author.</li>
+</ul>
+</li>
+<li>
+<p>If the feature or defect interacts with sensitive data, or controls access to
+sensitive data, or contains security/risky infrastructure
+changes to the target environment, the code changes must be reviewed by the
+Security team before the feature is marked as complete.</p>
+<ul>
+<li>This review must include a security analysis for potential vulnerabilities
+such as those listed in the <a href="https://www.owasp.org/index.php/Top10">OWASP Top
+10</a>.</li>
+<li>This review must also verify that any actions performed by authenticated
+users will generate appropriate audit log entries.</li>
+</ul>
+</li>
+</ol>
+<h4>Release Strategy</h4>
+<p>Features, enhancements, and bugs are written up as issues (https://tidepool.atlassian.net).  An engineer
+on a small team proposes changes necessary and creates a review for the team
+(https://github.com/tidepool-org).  Continuous integration (circle-ci.org) kicks off unit and functional
+tests which pass before changes are merged into the repository.  Once the review
+is complete, the changes are now deployed to the development environment where
+regression and end-to-end tests are run before the new code replaces the
+existing in-service code (test then deploy model). Small teams can decide to
+follow a source-control branching strategy that makes sense: git-flow, github
+flow.</p>
+<p>Tidepool practices continuous delivery of code into production through multiple
+environments: development, testing, production. The deploy process and
+infrastructure roll-out are written as code (Terraform or AWS Cloud Formation) and managed under source
+control.</p>
+<p>Tidepool's multiple lower environments (dev, test) provide an ecosystem of
+sample data sets that can be used to exercise the application and services when
+test automation is run.  The test environment is where the system is stressed
+for performance and scalability.  Performance and scalability changes are driven
+by metric data captured through monitoring and logging (metrics before and after
+change - typically captured as part of the issue description/writeup).</p>
+<p>Deployments to production are gated by change management process where an issue
+is opened which identify what is new/changed (https://tidepool.atlassian.net).  Sign-offs are recorded by
+development, testing, security, and product management.  Production roll-outs
+happen on a regular basis without impact to service.  This continuous process
+allows for security updates to roll out regularly and with urgency.  If there is
+impact to production, a rollback is performed to restore service and whatever
+caused the problem is reverted from source.  This restarts the re-proposal
+approval process of source changes.</p>
+<p>This process keeps set of differences between the development environment and
+the production environment as low as possible.</p>
+<p>Features may be released via code deployments or features may be enabled in
+production at an appropriate time (dark launching).  Feature toggle enablement in
+production is gated by the same change management ticket (https://tidepool.atlassian.net) that follows the
+software roll-out approval process.  Feature toggle enablement in production can
+have a few more dependencies than code.  Those dependencies include things like
+external documentation, early access programs, and internal playbooks for
+supporting the feature.</p>
+<p><strong>Detailed process and procedures for code promotion and production release:</strong>
+See <a href="ccm.htm">Configuration and Change Management</a>.</p>

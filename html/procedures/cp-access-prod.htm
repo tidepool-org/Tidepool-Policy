@@ -1,0 +1,8 @@
+<h3>Production Access and Secrets Management</h3>
+<p>Tidepool leverages a combination of <a href="https://support.cloudbees.com/hc/en-us/articles/203802500-Injecting-Secrets-into-circle-ci.org-Build-Jobs">circle-ci.org credentials
+store</a>,
+<a href="https://github.com/mozilla/sops">sops</a>, and <a href="https://docs.aws.amazon.com/kms/index.html">Amazon KMS</a>
+to securely store production secrets.  Secrets are always encrypted; access to
+secrets is always controlled and audited.</p>
+<p>Tidepool utlizes sops for portablity and to ensure we can safely store and use secrets in source code</p>
+<p>Details and usage are documented on the Tidepool Engineering Wiki.</p>

@@ -53,10 +53,7 @@ If sequencing numbers are included in the policy headings:
 #### Review and Maintenance of Policies
 
 1. All policies are stored and up to date to maintain {{companyShortName}} compliance with
-   {{#needStandardHIPAA}}HIPAA,{{/needStandardHIPAA}}
-   {{#needStandardPCI}}PCI,{{/needStandardPCI}}
-   {{#needStandardNIST}}NIST,{{/needStandardNIST}}
-   SOC 2 and other relevant standards. Updates and version
+   HIPAA, HITRUST and other relevant standards. Updates and version
    control are done similar to source code control.
 
 2. Policy update requests can be made by any workforce member at any time.
@@ -105,20 +102,20 @@ If sequencing numbers are included in the policy headings:
    current master policies are published at
    [{{&securityPolicyURL}}]({{&securityPolicyURL}}).
 
-    * Changes are automatically communicated to all {{companyShortName}} team members
+    * _ ** this is needed ** Changes are automatically communicated to all {{companyShortName}} team members
       through integrations between {{sourceControl}} and Slack that log changes
-      to a predefined {{companyShortName}} Slack Channel.
-    * The Security Officer also communicates policy changes to all employees via
+      to a predefined {{companyShortName}} Slack Channel._
+    * The Security Officer or his designate also communicates policy changes to all employees via
       email. These emails include a high-level description of the policy change
       using terminology appropriate for the target audience.
+    * Changes to security policy may also be notified to all Tidepool users via the General Slack channel
 
 5. All policies, and associated documentation, are retained for 7 years from the
    date of its creation or the date when it last was in effect, whichever is
    later
 
-     1. Version history of all {{companyShortName}} policies is done via {{sourceControl}}.
-     2. Backup storage of all policies is done with AWS S3 and/or internal file
-        share (e.g. Microsoft Office365 SharePoint or Box).
+     1. Version history of all {{companyShortName}} policies is done via {{sourceControl}} and {{Provider}}.
+     2. Backup of all policies is also done with Atlassian Confluence.
 
 6. The policies and information security policies are reviewed and audited
    annually, or after significant changes occur to {{companyShortName}}'s

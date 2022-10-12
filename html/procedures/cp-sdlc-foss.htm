@@ -1,0 +1,15 @@
+<h3>Free and Open Source Software (FOSS) Security</h3>
+<p>Tidepool security and development team implemented a process to</p>
+<ul>
+<li>Inventory all software dependencies;</li>
+<li>Scan software dependencies for known security vulnerability;</li>
+<li>Fix any and all high risk findings prior to production; and</li>
+<li>Review and identify licensing issues of the 3rd party software and
+libraries.</li>
+</ul>
+<p>The current tool in use is Snyk. Snyk supports Node.js, Ruby,
+and Java. Documentation can be found at the Snyk website.</p>
+<p>Snyk also enables automatic license analysis for dependencies, and this
+functionality is embedded into the <code>securityScan()</code> circle-ci.org pipeline step.</p>
+<p>Snyk can be leveraged in local development environment to scan locally
+and/or at every build for dev to include dev dependencies.</p>

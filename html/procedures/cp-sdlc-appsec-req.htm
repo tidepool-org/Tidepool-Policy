@@ -1,0 +1,35 @@
+<h3>High Level Application Security Requirements</h3>
+<p>All Tidepool software must be developed to include the following general
+application security principles and requirements.  Web applications must also
+protect itself against the <a href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project#tab=OWASP_Top_10_for_2017_Release_Candidate">OWASP Top
+10</a>
+vulnerabilities.</p>
+<ol>
+<li>Protect sensitive customer data such as PHI,
+PII and account passwords. Encrypt data stored (at rest).</li>
+<li>Secure data in transit and customer communications via TLS.</li>
+<li>Provision strong access control (authentication and authorization). Prevent
+and report unauthorized access.</li>
+<li>Log all transactions and activities to be able to tell who did what, when,
+where, and how. Mask or remove sensitive data in logs.</li>
+<li>Implement client security at application endpoints (e.g. browser, mobile
+app).</li>
+<li>Communicate securely across application endpoints and between service
+consumers/producers.</li>
+<li>Use secure defaults to ensure security when in all error conditions.</li>
+<li>Check and maintain the security of all third party and open source
+libraries/components/dependencies.</li>
+<li>Validate all data inputs; encode data outputs when appropriate.</li>
+<li>Deploy and configure applications securely to production.</li>
+<li>Perform regular vulnerability analysis and apply security patches promptly.</li>
+<li>Secure privileged access to production environments and ensure ongoing
+application monitoring.</li>
+</ol>
+<p>All software code should complete an appropriate set of security scans/testing prior to being
+deployed to production, including open source dependency scanning, static and
+dynamic application security testing, as well as periodic penetration testing.</p>
+<p>Pre-production testing is performed with nonproduction data in nonproduction
+environments. Health checks are performed regularly or automated in production.</p>
+<p>Software vulnerability identified through any of the above processes shall be
+reported and tracked following Tidepool Vulnerability Management process
+as defined in the <a href="vuln-mgmt.htm">Vulnerability Management Policy and Procedures</a>.</p>

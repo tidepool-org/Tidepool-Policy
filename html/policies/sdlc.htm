@@ -1,0 +1,82 @@
+<h1>Secure Software Development and Product Security</h1>
+<p><code>2022.08.31</code></p>
+<p>Tidepool development team follows the latest security best practices when
+developing software, and automates security testing throughout development
+lifecycle whenever possible.</p>
+<p>Security is integrated into all phases of Tidepool product development lifecycle,
+including:</p>
+<ul>
+<li>
+<p>Secure Design:</p>
+<ul>
+<li>App Risk classification</li>
+<li>Security req definition</li>
+<li>Secure application design / RFC</li>
+<li>Threat modeling</li>
+<li>App data flow analysis</li>
+</ul>
+</li>
+<li>
+<p>Secure Development and Testing:</p>
+<ul>
+<li>
+<p>Secure coding guidelines</p>
+</li>
+<li>
+<p>Peer review</p>
+</li>
+<li>
+<p>Security testing that includes:</p>
+<ul>
+<li>Linting with security rules</li>
+<li>Open source security analysis</li>
+<li>Static secure code analysis</li>
+<li>Dynamic security analysis</li>
+<li>Penetration testing</li>
+</ul>
+</li>
+<li>
+<p>Responsible vulnerability disclosure / bug bounty program</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Remediation:</p>
+<ul>
+<li>Follows defined vulnerability management lifecycle</li>
+<li>Ensures no high risk security vulnerability is in production</li>
+</ul>
+</li>
+</ul>
+<p>Details about the Tidepool software application architecture and
+security are documented on the <a href="https://tidepool.atlassian.net/l/cp/PBK1MLhN">Tidepool Technical Documentation site</a> <a href="https://tidepool.atlassian.net/wiki/spaces/TE/overview">Tidepool/s Engineering internal wiki</a>.</p>
+<h2>Policy Statements</h2>
+<p>Tidepool policy requires that:</p>
+<p>(a) Tidepool software engineering and product development is required to follow
+security best practices. Product should be "Secure by Design" and "Secure by
+Default".</p>
+<p>(b) Quality assurance activities must be performed. This may include</p>
+<ul>
+<li>peer code reviews prior to merging new code into the main development branch
+(e.g. master branch); and</li>
+<li>thorough product testing before releasing to production (e.g. unit testing
+and integration testing).</li>
+</ul>
+<p>(c) Risk assessment activities (i.e. threat modeling) must be performed for a
+new product or major changes to an existing product.</p>
+<p>(d) Security requirements must be defined, tracked, and implemented.</p>
+<p>(e) Security analysis must be performed for any Open Source software and/or
+third-party components and dependencies included in Tidepool software products.</p>
+<p>(f) Security analysis must be performed before integrating SaaS or applications handling different levels of data classification.</p>
+<p>(g) Integration between systems containing or processing PHI and systems that do not is prohibited without the approval of the Security Officer and Privacy officer. </p>
+<p>(h) Static application security testing (SAST) should be performed throughout
+development and prior to each release.</p>
+<p>(i) Dynamic application security testing (DAST) should be performed prior to each
+release.</p>
+<p>(j) Open Source Library and license scanning must be performed prior to each release.</p>
+<p>(k) All critical or high severity security findings must be remediated prior to
+each release.</p>
+<p>(l) All critical or high severity vulnerabilities discovered post release must
+be remediated in the next release or within 30 days, whichever is sooner.</p>
+<p>(m) Any exception to the remediation of a finding must be documented and
+approved by the security team or VP of Engineering.</p>

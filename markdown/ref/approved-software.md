@@ -1,0 +1,45 @@
+## Approved Software
+
+`2022.09.09`
+
+Software approved for use at Tidepool includes, but is not limited to:
+
+* 1Password password manager
+* Adobe suite
+* Atlassian suite
+* Code editors (Atom, Emacs, Vim, VS Code, etc)
+* Xcode and other IDE's (Android Studio, Eclipse, Jetbrains tools)
+* Github
+* Docker
+* Node/NPM
+* Postman
+* Slack
+* Zoom
+* AWS
+* MogoDB Atlas
+* Google Workspace/G-suite
+* Microsoft Office
+* Circle CI
+* GitLab
+* Terraform
+* Stoplight.io
+* Lookback.io
+* CRM software platforms (Salsa, Marketo)
+
+Reputable and well documented open source / free software may be used for
+development purposes at the discretion of the Engineering team. 
+
+Additional periodic audit may be conducted to review the usage of open source
+tools. Examples of such software include, but are not limited to:
+
+* Chrome and various browser extensions
+* Firefox and various browser extensions
+* Homebrew
+* GraphQL
+* Gitkraken
+* kubernetes
+* CNCF [Cloud Native Computing Foundation](https://www.cncf.io/) software
+
+Software not in the list above may be installed if it is necessary for a
+business purpose, legal, with a valid license if not Open Source, and approved on a case-by-case
+basis by your manager or the Security Officer.

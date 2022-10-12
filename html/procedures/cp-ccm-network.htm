@@ -1,0 +1,29 @@
+<h3>Configuration and Management of Network Controls</h3>
+<p>All network devices and controls on a sensitive network are configured such
+that:</p>
+<ul>
+<li>
+<p>Vendor provided default configurations are modified securely, including</p>
+<ul>
+<li>default encryption keys,</li>
+<li>default SNMP community strings, if applicable,</li>
+<li>default passwords/passphrases, and</li>
+<li>other security-related vendor defaults, if applicable.</li>
+</ul>
+</li>
+<li>
+<p>Encryption keys and passwords are changed anytime anyone with knowledge of the
+keys or passwords leaves the company or changes positions.</p>
+</li>
+<li>
+<p>Traffic filtering (e.g. firewall rules) and inspection (e.g. Network IDS/IPS
+or AWS VPC flow logs) are enabled.</p>
+</li>
+<li>
+<p>An up-to-date network diagram is maintained.</p>
+</li>
+</ul>
+<p>In AWS, network controls are implemented using Virtual Private Clouds (VPCs) and
+Security Groups. The configurations are managed as code and stored in approved
+repos. All changes to the configuration follow the defined code review, change
+management and production deployment approval process.</p>

@@ -1,0 +1,140 @@
+<h3>Temporary Access to AWS Accounts and Resources</h3>
+<p>Access to Tidepool AWS accounts are permissible through temporary credentials /
+sessions only.  No persistent users, passwords or access keys are allowed in AWS
+IAM configurations for end-user access, either to the AWS console or AWS CLI.
+This is achieved with the following processes:</p>
+<p><strong>AWS Console Access</strong></p>
+<ul>
+<li>
+<p>An organization master account (<code>Tidepool-master</code>) in AWS is configured with
+IAM roles such as Developer and Security.</p>
+</li>
+<li>
+<p>SAML SSO and trust relationship is established between the roles in
+<code>Tidepool-master</code> and an "AWS application" provisioned in Okta.</p>
+</li>
+<li>
+<p>Users are assigned their corresponding roles through application and role
+assignment in Okta.</p>
+</li>
+<li>
+<p>Via SSO, Users authenticate through Okta by using their Okta username,
+password, and MFA.</p>
+</li>
+<li>
+<p>Upon successful authentication and MFA validation, users are logged into
+<code>Tidepool-master</code> using AWS Assume Role capability.</p>
+</li>
+<li>
+<p>The roles in <code>Tidepool-master</code> by default has highly restricted access. For
+example, the <code>Developer</code> role does not have access to any services and
+resources in the master account.</p>
+</li>
+<li>
+<p>The user is required to Assume a Role in a sub-account, connected via
+cross-account trust policy defined at account bootstrap or through an approved
+change management process.  For example, a Developer can assume the
+<code>Administrator</code> role in <code>Tidepool-dev</code>, which is the sandboxed development
+environment in a separate AWS account.</p>
+</li>
+<li>
+<p>Assume Role access to a production AWS account is highly restricted.</p>
+<ul>
+<li>Developers can only assume the <code>Developer</code> role in production which only
+has access to read CloudWatch logs, XRay system traces/service maps,
+CloudWatch metrics, resource group inventories, and CloudWatch dashboards.</li>
+<li>Security can only assume the <code>Auditor</code> role in production which has the
+default Auditor IAM policy managed by AWS.  This policy allows read-only
+access to account and resource configurations, but does not allow read
+access to any data such as S3 objects.</li>
+</ul>
+</li>
+</ul>
+<p><strong>AWS CLI/SDK Access</strong></p>
+<ul>
+<li><a href="https://github.com/oktadeveloper/okta-aws-cli-assume-role">Okta AWS-CLI Tool</a>
+is used to obtain temporary credentials (access keys) for developers to
+connect to AWS using the CLI or SDK.</li>
+<li>By running the Okta AWS-CLI Tool, developers are prompted to authenticate to
+Okta using their Okta credentials and MFA token/app.</li>
+<li>Upon successful authentication and MFA validation, a temporary access key and
+session token is inserted into the local configuration file (e.g.
+<code>~/.aws/credentials</code> and <code>~/.aws/config</code>).</li>
+<li>This temporary credentials expires after one hour and a new temporary
+credential must be obtained for access.</li>
+<li>Through this method, developers are granted the same permission as they would
+by assuming the <code>Developer</code> role through AWS console.</li>
+<li>Additional details are documented on the <a href="https://tidepool.atlassian.net">Development Wiki</a>.</li>
+</ul>
+<p><strong>IAM Safety</strong></p>
+<ul>
+<li>Tidepool implements <strong>Dome9</strong> to monitor and protect its AWS environments.
+Dome9 provides an additional layer of defense on top of native IAM policies
+called <strong>IAM Safety</strong>.</li>
+<li>IAM Safety works by defining a set of risky actions, such as adding/remove IAM
+users to an <strong>Explicit Deny</strong> policy.  The policy is attached to an IAM Group,
+and protected Users and/or Roles are assigned to this Group.</li>
+<li>Because explicit deny rules always take precedence in AWS IAM policy, this
+effectively restricts access and prohibits execution of the risky actions as
+defined in the policy, even if the user/role may have administrative
+privilege.</li>
+<li>Original access can be temporarily restored through the Dome9 web console or
+its mobile app.</li>
+<li>Privilege Roles, such as Security role in master account and Administrator
+role in production account, are protected by IAM Safety.</li>
+<li>Additional details can be found on <a href="https://dome9-security.atlassian.net/wiki/spaces/DG/pages/2981893/IAM+Safety+Overview">Dome9's product
+documentation</a>.</li>
+</ul>
+<p><strong>Troubleshooting / Support Access</strong></p>
+<p>In normal operations, troubleshooting is performed with log analysis in Sumo
+Logic, outside of the production environments in AWS. A separate Support role is
+created for temporary troubleshooting and support access when log access is
+insufficient to determine the cause. Support access should be minimized and is
+designed to involve manual approval and provision process.</p>
+<ul>
+<li>The Support role by default is NOT assigned to anyone.</li>
+<li>The Support role is configured with Read level access to the services used by
+Tidepool platform services and applications.  It does NOT have permission to
+make any configuration changes and does NOT have access to production data.</li>
+<li>A PRODCM ticket is used to request temporary support access and must be
+approved by Head of Engineering and Security.</li>
+<li>Upon approval of the support access PRODCM ticket, Security grants the
+requestor temporary access to by assigning the Support role to that particular
+individual user in Okta.</li>
+<li>The Support role is protected by Dome9 with IAM Safety and it must be
+explicitly allowed by the Security team for it to assume the Support role in
+the target production environment.</li>
+<li>By default, temporary Support access is limited to one hour.  This can be
+extended by the Security team.</li>
+<li>The role assignment is removed from Okta immediately after the support session
+and Dome9 IAM Safety is re-enabled.</li>
+</ul>
+<p><strong>Dual Control for Root Access</strong></p>
+<p>Tidepool implements a Dual Control / Split Knowledge process to protect the Root
+user access to our AWS accounts. The process works as follow:</p>
+<ul>
+<li>
+<p>Security Lead has access to the root account credentials.</p>
+<ul>
+<li>The credentials are stored encrypted in the master account.</li>
+<li>Security Lead obtains temporary access to the master account following the
+process listed above (MFA is required).</li>
+<li>Security Lead must assume a role with permission to access the credential
+(e.g. Administrator), which is protected by an additional layer of IAM
+Safety.</li>
+</ul>
+</li>
+<li>
+<p>Engineering Lead has access to the Hardware Tokens associated with the root
+users.</p>
+<ul>
+<li>The tokens are stored in secured facility with restricted badge reader
+access.</li>
+<li>The token serial is mapped per account and documented in <a href="https://tidepool.atlassian.net">Tidepool
+Engineering Wiki</a>.</li>
+</ul>
+</li>
+</ul>
+<p>When root access is required for business or operational needs, a https://tidepool.atlassian.net Issue is
+created that requires the Security Lead and Engineering Lead to jointly perform
+the action.</p>

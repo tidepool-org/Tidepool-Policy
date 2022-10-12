@@ -1,0 +1,133 @@
+<h3>Security Findings Reporting, Tracking and Remediation</h3>
+<p>We follow a simple vulnerability tracking process using https://tidepool.atlassian.net. The
+records of findings are retained for seven years.</p>
+<h4>Reporting a finding</h4>
+<ul>
+<li>
+<p>Upon identification of a vulnerability (including vulnerability in software,
+system, or process), a https://tidepool.atlassian.net Issue of (issueType =
+<strong>Finding</strong>) is created on the SECURITY Project.</p>
+</li>
+<li>
+<p>Populate the following custom fields as part of the https://tidepool.atlassian.net issue when
+applicable:</p>
+<blockquote>
+<ul>
+<li><strong>Source of Finding</strong> (dropdown list)</li>
+<li><strong>In Production</strong> (yes/no/na selection)</li>
+<li><strong>Application/Repo Name</strong> (text/tag)</li>
+<li><strong>Version Number</strong> (text/tag)</li>
+</ul>
+</blockquote>
+</li>
+<li>
+<p>The <strong>Summary</strong> of the Finding should be in this format: "{[sev]} {short
+description}" (e.g. "[High] Outdated package on ECS AMI image").</p>
+</li>
+<li>
+<p>The <strong>Description</strong> of the Finding should include further details, without
+any confidential information, and a link to the source.</p>
+</li>
+<li>
+<p>The <strong>Priority</strong> of the Finding should match its severity level.</p>
+</li>
+</ul>
+<h4>Priority/Severity Ratings and Service Level Agreements</h4>
+<p>In an effort to quickly remediate security vulnerabilities the following timelines have been put in place to drive resolution.</p>
+<table>
+<thead>
+<tr>
+<th>Sev Rating</th>
+<th align="center">Priority Level</th>
+<th align="right">SLA</th>
+<th align="left">Definition</th>
+<th align="left">Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P0</td>
+<td align="center">Highest</td>
+<td align="right">3 days</td>
+<td align="left">Vulnerabilities that cause a privilege escalation on the platform from unprivileged to admin, allows remote code execution, financial theft, unauthorized access to/extraction of sensitive data, etc.</td>
+<td align="left">Vulnerabilities that result in Remote Code Execution such as Vertical Authentication bypass, SSRF, XXE, SQL Injection, User authentication bypass</td>
+</tr>
+<tr>
+<td>P1</td>
+<td align="center">High</td>
+<td align="right">7 days</td>
+<td align="left">Vulnerabilities that affect the security of the platform including the processes it supports.</td>
+<td align="left">Lateral authentication bypass, Stored XSS, some CSRF depending on impact.</td>
+</tr>
+<tr>
+<td>P2</td>
+<td align="center">Medium</td>
+<td align="right">30 days</td>
+<td align="left">Vulnerabilities that affect multiple users, and require little or no user interaction to trigger.</td>
+<td align="left">Reflective XSS, Direct object reference, URL Redirect, some CSRF depending on impact.</td>
+</tr>
+<tr>
+<td>P3</td>
+<td align="center">Low</td>
+<td align="right">Best Effort</td>
+<td align="left">Issues that affect singular users and require interaction or significant prerequisites (MitM) to trigger.</td>
+<td align="left">Common flaws, Debug information, Mixed Content.</td>
+</tr>
+</tbody>
+</table>
+<p>In the case a sev rating / priority level is updated after a vulnerability
+finding was originally created, the SLA is updated as follow:</p>
+<ul>
+<li><strong>severity upgrade:</strong> reset SLA from time of escalation</li>
+<li><strong>severity downgrade:</strong> SLA time remains the same from time of
+creation/identification of finding</li>
+</ul>
+<h4>Resolving a finding</h4>
+<ul>
+<li>
+<p>The Finding should be assigned to the owner responsible for the system or
+software package.</p>
+</li>
+<li>
+<p>All findings should be addressed according to the established SLA.</p>
+</li>
+<li>
+<p>No software should be deployed to production with unresolved HIGH or MEDIUM
+findings, unless an Exception is in place (see below).</p>
+</li>
+<li>
+<p>A finding may be resolved by</p>
+<ol>
+<li>providing a valid fix/mitigation</li>
+<li>determining as a false positive</li>
+<li>documenting an approved exception</li>
+</ol>
+</li>
+</ul>
+<h4>Closing a finding</h4>
+<ul>
+<li>The assignee should provide a valid resolution (see above) and add a comment
+to the finding.</li>
+<li>The finding should be re-assigned to the Reporter or a member of the security
+team for validation.</li>
+<li>Upon validation, the finding can be marked as Done (closed) by the Reporter.</li>
+<li><strong>Before the finding can be marked as closed by the reporter, the fix must
+be deployed to dev and have a targeted release date for deploying to
+production noted on the ticket.</strong></li>
+</ul>
+<h4>Exceptions</h4>
+<ul>
+<li>An Exception may be requested when a viable or direct fix to a vulnerability
+is not available. For example, a version of the package that contains the
+fix is not supported on the particular operating system in use.</li>
+<li>An alternative solution (a.k.a. compensating control) must be in place to
+address the original vulnerability such that the risk is mitigated. The
+compensating control may be technical or a process or a combination of both.</li>
+<li>An Exception must be opened in the form of a https://tidepool.atlassian.net issue
+(issueType = <strong>Exception</strong>) on the SECURITY project.</li>
+<li>The Exception https://tidepool.atlassian.net issue must reference the original Finding
+by adding an Issue Link to the Finding https://tidepool.atlassian.net issue.</li>
+<li>Each Exception must be reviewed and approved by the Security team and the
+impacted asset owner.</li>
+<li>All Exceptions are reviewed every six months to re-assess its validity.</li>
+</ul>

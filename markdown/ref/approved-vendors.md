@@ -1,0 +1,6 @@
+## Approved Vendors
+
+`2022.09.09`
+
+For confidentiality reasons, the list of approved vendors is maintained
+internally and on the [Tidepool Technical Documentation Confluence site](https://tidepool.atlassian.net/wiki/spaces/PUBSEC/pages/862128458/Business+Associate+Agreements)
