@@ -56,7 +56,7 @@ Direct all other communication requests to one of the following:
 
 * For privacy concerns, including report of violation:
     - [privacy@tidepool.org](mailto:privacy@tidepool.org)
-    - <https://developer.tidepool.org/privacy-policy>
+    - <https://tidepool.org/privacy-policy>
 
 * For all compliance related issues, including request of audit reports:
     - [compliance@tidepool.org](mailto:compliance@tidepool.org)

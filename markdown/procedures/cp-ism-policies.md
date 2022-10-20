@@ -12,4 +12,3 @@ contain two main sections:
 
 All policy documents are maintained, reviewed, updated and approved following
 standards and procedures outlined in [Policy Management](policy-mgmt.md).
-

@@ -1,6 +1,6 @@
 ## Approved Software
 
-`2022.09.09`
+`2022.10.17`
 
 Software approved for use at Tidepool includes, but is not limited to:
 
@@ -8,7 +8,7 @@ Software approved for use at Tidepool includes, but is not limited to:
 * Adobe suite
 * Atlassian suite
 * Code editors (Atom, Emacs, Vim, VS Code, etc)
-* Xcode and other IDE's (Android Studio, Eclipse, Jetbrains tools)
+* Xcode and other IDE's (Android Studio, Eclipse)
 * Github
 * Docker
 * Node/NPM
@@ -18,13 +18,16 @@ Software approved for use at Tidepool includes, but is not limited to:
 * AWS
 * MogoDB Atlas
 * Google Workspace/G-suite
-* Microsoft Office
 * Circle CI
-* GitLab
-* Terraform
 * Stoplight.io
-* Lookback.io
-* CRM software platforms (Salsa, Marketo)
+
+The tools above were adopted by Tidepool prior to a formal evaluation process, 
+which is now in place to insure the confidentiality, privacy, and integrity of Tidepool data.
+
+Additional Software and Services are available internally in our [Software Services List](https://tidepool.atlassian.net/wiki/spaces/TSEC/pages/142770469/Vendor+Technology+Review+of+Software+and+Services)
+
+The above tools are also under a "grandfather clause", in this case indicating they have stood the test of continued 
+use with no security or compliance problems based on retrospective review (performed continuously for software and services).
 
 Reputable and well documented open source / free software may be used for
 development purposes at the discretion of the Engineering team. 

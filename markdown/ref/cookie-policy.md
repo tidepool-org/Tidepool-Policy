@@ -9,14 +9,14 @@ mobile applications (the "Services"). This Cookie Policy explains these
 technologies, why we use them, and the choices you have.  
 
 By visiting or using our Services, you are consenting to us gathering and
-processing information (as defined in our [Privacy Policy](https://developer.tidepool.org/privacy-policy))
+processing information (as defined in our [Privacy Policy](https://tidepool.org/privacy-policy))
 about you in accordance with this Cookie Policy.
 
 ## TECHNOLOGIES WE USE
 
 Like many Internet-enabled services, we use technologies that place small
 files/code on your device or browser for the purposes identified in our
-[Privacy Policy](https://developer.tidepool.org/privacy-policy), primarily to remember things about you
+[Privacy Policy](https://tidepool.org/privacy-policy), primarily to remember things about you
 so that we can provide you with a better experience.  
 
 **Cookies.**  A cookie is a small data file stored on your browser or device.

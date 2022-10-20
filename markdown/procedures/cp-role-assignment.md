@@ -4,7 +4,7 @@ Tidepool has appointed Howard Look as the Security
 Officer and Howard Look as the Privacy Officer.
 
 The security committee is chaired by the Security Officer, and represented by
-the select members of the senior leadership team, including Security Officer, Privacy Officer, VP of Engineering, Security Engineer,
+the select members of the senior leadership team, including Security Officer, Privacy Officer, VP of Engineering,
 in addition to the Security and Privacy Officer.
 
 #### General Responsibilities of the Security and Privacy Officer

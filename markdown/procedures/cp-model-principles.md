@@ -243,7 +243,9 @@ Summary
 
 #### (10) Regulatory compliant and hacker verified
 
-Security != Compliance. We cannot have one without the other.
+Security != Compliance. We cannot have one without the other. 
+
+"Compliance isn't hard, but it's also not optional" - Howard Look, CEO/CSO/CPO
 
 
 ```info-Summary
@@ -253,4 +255,5 @@ Summary
 
 
     * Regulatory Compliant;
-    * Open Source Security verified via our [Security Disclosure program](https://tidepool.atlassian.net/l/cp/GqNHq0Yo)
+    * Open Source Security verified via our [Security Disclosure Program](https://tidepool.atlassian.net/l/cp/GqNHq0Yo)
+

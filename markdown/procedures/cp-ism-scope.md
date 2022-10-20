@@ -3,7 +3,7 @@
 Tidepool has developed a security program and implemented controls
 to meet and exceed all compliance requirements, including but not limited to
 HIPAA,
-NIST,
+NIST, (e.g. NIST Controls 800-53),
 and other applicable industry best practices.
 
 On a high level, Tidepool’s information security program covers:
@@ -23,7 +23,7 @@ On a high level, Tidepool’s information security program covers:
 
 More information about the Tidepool Security and Privacy program can
 be found at [https:&#x2F;&#x2F;www.tidepool.org&#x2F;security](https://www.tidepool.org/security) and
-[https:&#x2F;&#x2F;developer.tidepool.org&#x2F;privacy-policy](https://developer.tidepool.org/privacy-policy) as well as [Tidepool Technical Docs](https://tidepool.atlassian.net/wiki/spaces/PUBSEC/overview)
+[https:&#x2F;&#x2F;tidepool.org&#x2F;privacy-policy](https://tidepool.org/privacy-policy) as well as [Tidepool Technical Docs](https://tidepool.atlassian.net/wiki/spaces/PUBSEC/overview).
 
 The information security program and its policies and procedures cover all
 Tidepool workforce members, including full-time and part-time
@@ -31,4 +31,4 @@ employees in all job roles, temporary staff, contractors and subcontractors,
 volunteers, interns, managers, executives employees, and third parties.
 
 The information security program is managed by dedicated security and compliance
-personnel, using JupiterOne as a GRC platform.
+personnel, using JupiterOne as a Governance, Resource and Compliance (GRC) platform.

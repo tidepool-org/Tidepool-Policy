@@ -1,12 +1,12 @@
 ### Privacy Policy
 
 Current Privacy Policy is published at
-<https://developer.tidepool.org/privacy-policy>
+<https://tidepool.org/privacy-policy>
 
 ### Notice of Privacy Practice
 
 Current Notice of Privacy Practice (NPP) is published at
-<https://developer.tidepool.org/privacy-policy>
+<https://tidepool.org/privacy-policy>
 
 ### Platform Use Terms and Consent
 

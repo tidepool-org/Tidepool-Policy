@@ -64,9 +64,8 @@ If sequencing numbers are included in the policy headings:
    process:
 
     1. The Tidepool employee initiates a policy change request by creating an
-       Issue in the https:&#x2F;&#x2F;tidepool.atlassian.net Security project. The change request may optionally
-       include a https:&#x2F;&#x2F;github.com&#x2F;tidepool-org pull request from a separate branch or
-       repository containing the desired changes.
+       Issue in the Tidepool JIRA [SECURITY project](https://tidepool.atlassian.net/jira/software/c/projects/SECURITY/boards/8) 
+       or sending an email to [security@tidepool.org](mailto:security@tidepool.org). 
 
     2. The Security Officer or the Privacy Officer is assigned to review the
        policy change request.
@@ -90,28 +89,12 @@ If sequencing numbers are included in the policy headings:
        versions if necessary.
 
 
-```info-important
-Important
-```
-
-
-
-        * Changes are made on the `drafts` (or equivalent) branch instead of on the `master` branch for commits.
-        * If multiple authors are working on the changes, additional separate branches and pull requests may be necessary before changes are merged in `drafts`.
-        * Changes must not be merged to `master` without the approval of Security and Privacy Officer.
-        * Changes must not be merged to `master` without archiving the existing version of policy document(s), unless the change is a minor revision.
-        * Once the changes are final and approved, a pull request shall be created from the `drafts` branch to the `master` branch and all members of the development team shall be included as approvers.  This serves as communication and training of policy updates to the development organization, and the pull request approvals serve as records of training received.
-        * Policy update communication and training for non-development staff is conducted separately by the Security team.
-
 4. All policies are made accessible to all Tidepool workforce members. The
    current master policies are published at
    [https://www.tidepool.org/security](https://www.tidepool.org/security).
 
-    * _ ** this is needed ** Changes are automatically communicated to all Tidepool team members
-      through integrations between https:&#x2F;&#x2F;github.com&#x2F;tidepool-org and Slack that log changes
-      to a predefined Tidepool Slack Channel._
-    * The Security Officer or his designate also communicates policy changes to all employees via
-      email. These emails include a high-level description of the policy change
+    * The Security Officer or his designate communicates policy changes to all employees via
+      email or Slack notifications via automation. These emails include a high-level description of the policy change
       using terminology appropriate for the target audience.
     * Changes to security policy may also be notified to all Tidepool users via the General Slack channel
 
@@ -119,8 +102,8 @@ Important
    date of its creation or the date when it last was in effect, whichever is
    later
 
-     1. Version history of all Tidepool policies is done via https:&#x2F;&#x2F;github.com&#x2F;tidepool-org and .
-     2. Backup of all policies is also done with Atlassian Confluence.
+     1. Version history of all Tidepool policies is done via or JupiterOne and may also be stored in https:&#x2F;&#x2F;github.com&#x2F;tidepool-org .
+     2. Backup and publishing of all policies is also integrated with Atlassian Confluence, as our company knowledge base.
 
 6. The policies and information security policies are reviewed and audited
    annually, or after significant changes occur to Tidepool's
@@ -130,7 +113,7 @@ Important
    addressed. The process for reviewing polices is outlined below:
 
     1. The Security Officer initiates the policy review by creating an Issue in
-       the https:&#x2F;&#x2F;tidepool.atlassian.net Security project or via a Pull Request (PR).
+       the https:&#x2F;&#x2F;tidepool.atlassian.net SECURITY project or via a Pull Request (PR).
     2. The Security Committee members and additional reviewers are notified by
        email or via the PR to review the current policies.
     3. If changes are made, the above process is used. All changes are
@@ -141,7 +124,7 @@ Important
     5. If the review is approved, the Security Officer then marks the Issue as
        Done, or merges the PR into master branch, adding any pertinent notes
        required.
-    6. Policy review is monitored using https:&#x2F;&#x2F;tidepool.atlassian.net or https:&#x2F;&#x2F;github.com&#x2F;tidepool-org
+    6. Policy review is monitored using https:&#x2F;&#x2F;tidepool.atlassian.net and JupiterOne
        reporting to assess compliance with above policy.
 
 

@@ -33,7 +33,7 @@ Protection Officer responsible for all GDPR-related affairs.
 
 An official **Security Advisory Committee** has been formed, chaired by the Security
 Officer, and represented by the select members of the senior leadership team
-(Security Officer, Privacy Officer, VP of Engineering, Security Engineer) and the Tidepool Security Engineer.
+(Security Officer, Privacy Officer, VP of Engineering) and the Tidepool Security Engineer.
 
 ## Policy Statements
 

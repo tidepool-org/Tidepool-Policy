@@ -1,22 +1,13 @@
 # Security Program Overview
 
-`2022.08.31`
+`2022.10.14`
 
 Tidepool is committed to protecting its employees, partners,
-clients/customers and the company itself from damaging acts either malicious or
+clients, customers and the company itself from damaging acts either malicious or
 unintentional in nature. This includes implementation of policies, standards,
 controls and procedures to ensure the Confidentiality, Integrity, and
 Availability of systems and data according to their risk level.
 
-The Tidepool security program and policies are developed on the
-principles that (1) security is everyone's responsibility and (2)
-self-management is best encouraged by rewarding the right behaviors.
-
-
-```info-WORK_NEEDED
- Tidepool HIPAA Overview to go here
-```
-
-
-[Quick Reference / Employee Handbook](https://github.com/tidepool-org/handbook)
-[Quick Reference/ Public Security and Privacy Documentation](https://docs.google.com/document/d/1ZLvnUihbvpSITs0lJfpSLsryPzAFHMSi_YdzToAzJu0/edit#heading=h.hx6cjf7pylf)
+Related documents:  
+[Tidepool Employee Handbook](https://tidepool.atlassian.net/wiki/spaces/HANDBOOK/overview)  
+[Tidepool Public Security and Privacy Documentation](https://tidepool.atlassian.net/wiki/spaces/PUBSEC/overview)

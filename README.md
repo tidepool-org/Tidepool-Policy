@@ -6,11 +6,13 @@ Tidepool has existing policies that will be merged/integrated with these documen
 
 [Tidepool Public Security Documentation](https://tidepool.org/security) A good starting place for current policy, compliance and infrastructure documentation
 
-# Publishing a new release of Tidepool-Policy
-The intent of this script is to help automate the publishing and managing of policy content for the Tidepool Project.
+## Publishing a new release of Tidepool-Policy
+
+The intent of this script is to help automate the publishing and managing of policy content for the Tidepool Project.  
+
 Thanks to [JupiterOne](https://github.com/JupiterOne) for the tools to do this.
 
-## Configuration
+### Configuration
 
 Run the following command to install the policy builder locally using NPM.
 
@@ -23,4 +25,3 @@ Run the following command to install the policy builder locally using NPM.
 1. Configure variables for the needed account and API keys
 
 ### [Publishing scripts](https://github.com/tidepool-org/Tidepool-Policy/tree/master/scripts/)
-

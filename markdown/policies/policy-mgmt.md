@@ -1,6 +1,6 @@
 # Policy Management
 
-`2022.08.26`
+`2022.10.17`
 
 Tidepool implements policies and procedures to maintain compliance and integrity
 of data. The Security Officer and Privacy Officer are responsible for
