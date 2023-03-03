@@ -1,9 +1,10 @@
 # User Onboarding Prompts
 
-1. Install Vanta Agent
+## Install Vanta Agent
+
 The Vanta agent checks for: Password Manager, Firewall Enabled, Disk Encryption, Automatic Updates. All employees need to install the agent, which runs on Mac, Windows and Linux
 
-1. Attestation: for HIPAA Policy and Security process docs
+## Attestation: for HIPAA Policy and Security process docs
 
 Employee confirms that they have read and understood these training and policy documents:
 
@@ -14,7 +15,7 @@ Employee confirms that they have read and understood these training and policy d
 - [Email Security and Phishing](https://tidepool.atlassian.net/wiki/x/cgAFHw)
 - [Antivirus Software and policy](https://tidepool.atlassian.net/wiki/x/AgABK)
 
-1. All devices accessing Tidepool data must use 2-factor authentication for Apple ID
+## All devices accessing Tidepool data must use 2-factor authentication for Apple ID
 
 Please upload a screenshot of your Apple ID settings:
 
@@ -22,58 +23,59 @@ Please upload a screenshot of your Apple ID settings:
 
 You can take a quick screenshot on Mac with `Command + Shift + 4` then draw around the window with your cursor. The screenshot will be saved to your Desktop folder
 
-1. 2-factor Authentication is required for all accounts that support it.
+## 2-factor Authentication is required for all accounts that support it.
 
-Tidepool security enforces 2-factor via policy wherever poossible.
+Tidepool Security enforces 2-factor via policy wherever poossible.
 
 Employee Certifies that all system admin accounts will be protected with 2-Factor or MFA for all critical accounts and that keys will be stored in accordance with Tidepool’s password and authentication policies by adding your digital below (e.g. /s/ James Jellyfish 2023-030-02)
 
-1. All Tidepool devices must use `256-bit AES` encrypted storage locally. If you make backups to an external destination, please upload a screenshot of the encryption settings of that device. (e.g. for Time Machine).
+## All Tidepool devices must use `256-bit AES` encrypted storage locally. If you make backups to an external destination, please upload a screenshot of the encryption settings of that device. (e.g. for Time Machine)
 
 ** Note that that there is no requirement for backups, but if you require a device please contact security@tidepool.org and one will be provided.
 
 `Apple - > System Settings -> General AppleID -> Time Machine`
 
-1. Find My Device - All devices that access Tidepool Data must have the location-based "Find My" features enabled, this includes phone, laptops and other mobile devices.
+## Find My Device - All devices that access Tidepool Data must have the location-based "Find My" features enabled, this includes phone, laptops and other mobile devices.
 
 e.g. for Apple devices:
 `Apple - > System Settings -> General AppleID -> iCloud -> Find my Mac`
 
-Please upload a screenshot of your `Find my device` settings.
+> Please upload a screenshot of your `Find my device` settings.
 
-1. Antivirus or Antimalware software is required for all computing devices (Windows, Mac OS or Linux) that access Tidepool data. Tidepool requires BitDefender Endpoint Security for all Mac devices and this software will be provide to any employee that does not have it for BYOD devices.
+## Antivirus or Anti-malware software is required for all computing devices (Windows, Mac OS or Linux) that access Tidepool data
 
-Non-Tidepool devices may use alternative anti-malware software. If you are using something different than Tidepool Bitdefender, please upload a screenshot of your software version definitions.
+Tidepool requires `BitDefender Endpoint Security` for all Tidepool-owned devices and this software will be provided to any employee that does not have it for BYOD devices.
 
-1. Network Protection
+> Non-Tidepool devices may use alternative anti-malware software. If you are using something different than Tidepool Bitdefender, please upload a screenshot of your software version definitions.
+
+## Network Protection
 
 To protect yourself and Tidepool, it is required not to use a Tidepool computing environment such as a laptop to run services exposed to the internet.
 
 e.g. if you have a sophisiticated network, you may already run services for development and testing, but please exercise caution and protect your network appropriately.
 
-Please enter your digital signature below to agree not expose your Tidepool computing environment or network to public internet without security controls.
+> Please enter your digital signature below to agree not expose your Tidepool computing environment or network to public internet without security controls.
 
-1. Limiting PHI in Email Inbox
+## Limiting PHI in Email Inbox
 
 Since we have a BAA in place with Google, we can use Tidepool Gmail for PHI. However, we do not have a BAA in place with other email services (like SalesforceIQ or Boomerang) that may have access to your Gmail inbox. We DO have a BAA in place with ZenDesk. It’s just good practice to keep PHI out of your inbox in order to prevent accidental forwarding.
 
-Take these steps for your Tidepool Gmail account to keep emails with PHI out of your Inbox:
+### Take these steps for your Tidepool Gmail account to keep emails with PHI out of your Inbox
 
-  1. When you send or forward an email that includes PHI, edit the subject line to preface it with “PHI”.
+#### When you send or forward an email that includes PHI, edit the subject line to preface it with “PHI”
 
-Employee certifies they agree to follow this practice by adding their digital below (e.g. /s/ James Jellyfish 2023-03-02)
-
-1. Filtering PHI in Email
+Filtering PHI in Email:
 
 - Setup a PHI mail filter that segregates email with PHI which should look as follows:
 
-  1. In Gmail, go to Settings (the gear icon) -> Show All Settings -> Filters
+- In Gmail, go to Settings (the gear icon) -> Show All Settings -> Filters
+
 `Subject:phi`
 
-  2. Do this: Skip Inbox, Star it, Apply label `PHI` (or similar), Mark it as important
+- Do this: Skip Inbox, Star it, Apply label `PHI` (or similar), Mark it as important
 
-Employee certifies they agree to use this filter for Tidepool inbox by uploading a screenshot of the filter including their tidepool account name, or sharing screen with auditor to capture a screenshot.
+> Employee certifies they agree to use this filter for Tidepool inbox by uploading a screenshot of the filter including their tidepool account name, or sharing screen with auditor to capture a screenshot.
 
-1. Do you use any other service that reads your Tidepool email account (like RelateIQ or Boomerang)? 
+## Do you use any other service that reads your Tidepool email account (like RelateIQ or Boomerang)?
 
-If you use a forwarding service, please enter it's name here
+If you use a mail forwarding service, please enter it's name here
