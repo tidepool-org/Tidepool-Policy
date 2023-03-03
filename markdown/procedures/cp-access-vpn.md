@@ -1,9 +1,0 @@
-### Remote Access / VPN
-
-* VPN remote access to non-production and non-privileged environments in AWS are
-  permissible and implemented using **Tailscale**.
-
-* VPN remote access to master and production accounts are prohibited.
-
-* VPN remote access to Tidepool office network(s) is configured via
-  **Tailscale**, and should be used whenever connecting from public networks.
